@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                retry (3) {
                 bat 'echo test'
+                }
             }
         }
     }
